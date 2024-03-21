@@ -1,0 +1,8 @@
+body{
+    font-family: "Airbnb Cereal App";;
+}
+
+@font-face {
+    font-family: "Airbnb Cereal App";
+    src: url(./airbnb-cereal-font/AirbnbCereal_W_Bk.otf);
+}
