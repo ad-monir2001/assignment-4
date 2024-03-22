@@ -1,8 +1,152 @@
-body{
-    font-family: "Airbnb Cereal App";;
+:root{
+    --hero-background-color: #ECF9FF;
+    --primary-font-color: #060640;
+    --secondary-font-color: #00E5CC;
+    --paragraph-color: #9090A7;
+    --soft-blue: #ECFDFF;
+    --footer-background: #000020;
+    --white: #FFF;
 }
 
 @font-face {
     font-family: "Airbnb Cereal App";
     src: url(./airbnb-cereal-font/AirbnbCereal_W_Bk.otf);
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Airbnb Cereal App";
+
+}
+
+
+/** Style rule for Header section **/
+
+.header{
+    position: fixed;
+    width: 100%;
+}
+
+.navbar{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 2.3rem 5%;
+    background: rgba(236, 249, 255, .5);
+    backdrop-filter: blur(50px);
+    
+}
+
+.navbar a{
+    text-decoration: none;
+}
+
+.logo a{
+    font-size: 1.8rem;
+    font-weight: 700;
+    color: var(--primary-font-color);
+}
+
+.logo::first-letter{
+    color: var(--secondary-font-color);
+}
+
+.nav__menu {
+    display: inline-flex;
+    gap: 2rem;
+    font-size: 1rem;
+    font-weight: 500;
+}
+.nav__menu a{
+    color: var(--paragraph-color);
+}
+
+.nav__menu .active{
+    color: var(--secondary-font-color);
+}
+
+.user__sec .signin{
+    color: #000;
+    font-weight: 500;
+    font-size: 1rem;
+}
+
+.user__sec .trial__btn{
+    background: var(--primary-font-color);
+    color: var(--white);
+    display: inline-flex;
+    height: 55px;
+    padding: 0px 30px;
+    justify-content: center;
+    align-items: center;
+    flex-shrink: 0;
+    border-radius: 8px;
+    margin-left: 1rem;
+}
+
+.icons{
+    font-size: 2.5rem;
+    color: var(--primary-font-color);
+    padding-top: 6px;
+    display: none;
+}
+
+#check{
+    display: none;
+}
+
+/** BREAKPOINTS **/
+
+@media screen and (max-width: 768px) {
+    .navbar .logo{
+        position: absolute;
+        right: 394px;
+    }
+
+
+    .navbar .user__sec{
+        position: absolute;
+        right: 5%;
+    }
+
+    .icons{
+        display: inline-flex;
+    }
+    
+    #check:checked~.icons #menu-icon{
+        display: none;
+    }
+
+    #close-icon{
+        display: none;
+    }
+
+    #check:checked~.icons #close-icon{
+        display: block;
+    }
+
+    .nav__menu{
+        position: absolute;
+        top: 100%;
+        left: 0;
+        width: 50%;
+        height: 0;
+        overflow: hidden;
+        background: red;
+        box-shadow: 0 .5rem 1rem rgba(0, 0, 0, 0.1);
+        display: flex;
+        flex-direction: column;
+        gap: 0;
+        justify-content: space-evenly;
+        text-align: center;
+        transition: .5s ease;
+    }
+    
+    #check:checked~.nav__menu{
+       height: 17.7rem;
+    }
+
+   
 }
