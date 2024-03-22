@@ -180,6 +180,7 @@
 
 .card:hover{
   box-shadow: 0px 30px 50px 0px #030325;
+  cursor: pointer;
 }
 
 .cards .card h2{
