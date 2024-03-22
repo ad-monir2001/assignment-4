@@ -70,7 +70,7 @@
   font-size: 1rem;
 }
 
-.btn {
+.trial__btn {
   background: var(--primary-font-color);
   color: var(--white);
   display: inline-flex;
@@ -81,6 +81,10 @@
   flex-shrink: 0;
   border-radius: 8px;
   margin-left: 1rem;
+}
+
+.trial__btn:hover{
+  opacity: .8;
 }
 
 .icons {
@@ -99,10 +103,98 @@
 .hero {
   padding: 10rem 5%;
   display: flex;
+  background: var(--hero-background-color);
 }
+
+.hero h1{
+  color: var(--primary-font-color);
+  font-size: 3rem;
+  font-weight: 700;
+}
+
+.hero__texts p{
+  color: var(--paragraph-color);
+  margin-top: 1rem;
+}
+
+.hero__button{
+  display: flex;
+  align-items: center;
+}
+
+.review__image{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.btn{
+  text-decoration: none;
+  background: var(--primary-font-color);
+  color: var(--white);
+  display: inline-flex;
+  height: 55px;
+  padding: 0px 30px;
+  justify-content: center;
+  align-items: center;
+  flex-shrink: 0;
+  border-radius: 8px;
+}
+
 .hero__img {
   width: 100%;
 }
+
+/** Style rule for work section **/
+
+.work{
+  padding: 5rem 5%;
+}
+
+.work h1{
+  color: var(--primary-font-color);
+  font-size: 45px;
+  font-weight: 700;
+  text-align: center;
+}
+
+.work > p{
+  color: var(--paragraph-color);
+  text-align: center;
+  margin-top: 1rem;
+}
+
+.cards{
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1rem;
+  margin-top: 2.5rem;
+}
+
+.cards .card{
+  max-width: 370px;
+  border-radius: 14px;
+  border: 2px solid rgba(6, 6, 64, 0.04);
+  padding: 2rem;
+}
+
+.card:hover{
+  box-shadow: 0px 30px 50px 0px #030325;
+}
+
+.cards .card h2{
+  color: var(--primary-font-color);
+  font-size: 24px;
+  font-weight: 500;
+  line-height: 34px;
+  margin: 2rem 0 1rem;
+}
+
+.cards .card p{
+  color: var(--paragraph-color);
+  line-height: 28px;
+}
+
 /** BREAKPOINTS **/
 
 @media screen and (max-width: 768px) {
@@ -152,5 +244,32 @@
 
   #check:checked ~ .nav__menu {
     height: 17.7rem;
+  }
+
+  .hero__img {
+    width: 100%;
+  }
+}
+
+@media (max-width: 428px) {
+  .logo{
+    position: absolute;
+    left: 117px;
+  }
+
+  .trial__btn {
+    height: 45px;
+    padding: 0px 15px;
+  }
+  .hero {
+    flex-direction: column;
+    gap: 2rem;
+  }
+
+  .cards{
+    display: inline;
+  }
+  .card{
+    margin-top: 1.5rem;
   }
 }
