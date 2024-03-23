@@ -25,6 +25,7 @@
 .header {
   position: fixed;
   width: 100%;
+  z-index: 9999;
 }
 
 .navbar {
@@ -230,7 +231,7 @@
   font-style: normal;
 }
 
-.service p{
+.service p , .newsletter p{
   color: var(--paragraph-color);
   margin: 1rem 0;
 }
@@ -246,7 +247,7 @@
   padding: 2rem 5%;
 }
 
-#services h1{
+#services h1 , .newsletter h1{
   color: var(--primary-font-color);
   font-size: 2.8rem;
   font-weight: 700;
@@ -321,9 +322,95 @@
   margin: 1.5rem 0;
 }
 
+#global__communication img{
+  width: 100%;
+}
+
+.newsletter{
+  background: #ecfdff;
+  margin: 1rem 5%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 1.5rem;
+  border-radius: 16px;
+  position: relative;
+}
+
+.newsletter img{
+  max-width: 353px;
+  position: absolute;
+  right: 23px;
+  bottom: 3px;
+}
+
+.newsletter__texts input{
+  background: #ffffff;
+  border-radius: 6px;
+  border: none;
+  padding: 1.5rem;
+  width: 80%;
+}
+
+
+.newsletter__texts a{
+  position: absolute;
+  left: 400px;
+  bottom: 30px;
+}
+
+
+
+
+
+
+
 
 
 /** BREAKPOINTS **/
+
+@media (max-width: 428px) {
+  .logo{
+    position: absolute;
+    left: 117px;
+  }
+
+  .trial__btn {
+    height: 45px;
+    padding: 0px 15px;
+  }
+  .hero {
+    flex-direction: column;
+    gap: 2rem;
+  }
+
+  .cards{
+    display: inline;
+  }
+  .card{
+    margin-top: 1.5rem;
+  }
+  #about{
+    display: inline;
+  }
+  .about__texts{
+    padding: 1rem 5%;
+  }
+
+  .packages{
+    display: inline;
+  }
+
+  .package{
+    margin-top: 1.5rem;
+  }
+
+  .newsletter img{
+    display: none;
+  }
+  
+}
+
 
 @media screen and (max-width: 768px) {
   .navbar .logo {
@@ -387,41 +474,22 @@
   .packages{
     grid-template-columns: repeat(2, 1fr);
   }
-}
 
-@media (max-width: 428px) {
-  .logo{
+  .newsletter__texts {
+    max-width: 340px;
+  }
+
+  .newsletter img{
+    max-width: 340px;
     position: absolute;
-    left: 117px;
+    right: 0;
+    bottom: 3px;
   }
 
-  .trial__btn {
-    height: 45px;
-    padding: 0px 15px;
+  .newsletter__texts a{
+    position: static;
+    margin: 1rem 0;
   }
-  .hero {
-    flex-direction: column;
-    gap: 2rem;
-  }
-
-  .cards{
-    display: inline;
-  }
-  .card{
-    margin-top: 1.5rem;
-  }
-  #about{
-    display: inline;
-  }
-  .about__texts{
-    padding: 1rem 5%;
-  }
-
-  .packages{
-    display: inline;
-  }
-
-  .package{
-    margin-top: 1.5rem;
-  }
+  
 }
+
