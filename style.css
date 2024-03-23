@@ -239,7 +239,87 @@
   width: 100%;
 }
 
+/** Style rule for services section **/
 
+#services{
+  background: #ecf9ff;
+  padding: 2rem 5%;
+}
+
+#services h1{
+  color: var(--primary-font-color);
+  font-size: 2.8rem;
+  font-weight: 700;
+}
+
+.packages{
+  margin: 2rem 0;
+  display: grid;
+  gap: 1rem;
+  grid-template-columns: repeat(3, 1fr);
+}
+
+.package{
+  max-width: 370px;
+  border-radius: 14px;
+  border: 1px solid #fff;
+  background: rgba(255, 255, 255, .20);
+  padding: 1rem;
+  position: relative;
+}
+
+.package > img{
+  width: 100%;
+}
+
+.package:hover{
+  background: #fff;
+  cursor: pointer;
+  transition: .5s ease;
+}
+
+
+.package h3{
+  color: #000;
+  font-size: 1.25rem;
+  font-weight: 500;
+}
+
+.users img{
+  border-radius: 50%;
+}
+
+.users p{
+  position: absolute;
+  left: 113px;
+  color: var(--paragraph-color);
+}
+
+.users{
+  display: flex;
+  align-items: center;
+}
+
+.dollar{
+  font-weight: 500;
+  color: var(--secondary-font-color);
+}
+
+.snd__img{
+  position: absolute;
+  left: 44px;
+}
+.trd__img{
+  position: absolute;
+  left: 70px;
+}
+
+.price__and__users{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin: 1.5rem 0;
+}
 
 
 
@@ -295,13 +375,17 @@
   }
 
   .hero__img {
-    width: 100%;
+    width: 70%;
   }
   #about{
     display: inline;
   }
   .about__texts{
     padding: 1rem 5%;
+  }
+
+  .packages{
+    grid-template-columns: repeat(2, 1fr);
   }
 }
 
@@ -331,5 +415,13 @@
   }
   .about__texts{
     padding: 1rem 5%;
+  }
+
+  .packages{
+    display: inline;
+  }
+
+  .package{
+    margin-top: 1.5rem;
   }
 }
